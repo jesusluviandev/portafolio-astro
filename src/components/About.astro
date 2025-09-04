@@ -1,0 +1,157 @@
+---
+// About.astro
+---
+
+<section id="sobre-mi" class="py-20 bg-gray-900">
+  <div class="container mx-auto px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <!-- Image/Visual Side -->
+        <div class="order-2 lg:order-1">
+          <div class="relative">
+            <!-- Profile Image Placeholder -->
+            <div class="w-full max-w-md mx-auto">
+              <div class="aspect-square bg-gradient-to-br from-gray-800 to-gray-700 rounded-2xl p-8 flex items-center justify-center">
+                <div class="text-center">
+                  <div class="w-32 h-32 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
+                    <span class="text-4xl font-bold text-gray-800">TU</span>
+                  </div>
+                  <p class="text-gray-400 text-sm">Tu foto profesional aquí</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Decorative elements -->
+            <div class="absolute -top-4 -right-4 w-24 h-24 bg-white opacity-10 rounded-full blur-xl"></div>
+            <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-white opacity-5 rounded-full blur-xl"></div>
+          </div>
+        </div>
+
+        <!-- Content Side -->
+        <div class="order-1 lg:order-2 space-y-6">
+          <div class="space-y-4">
+            <h2 class="text-4xl md:text-5xl font-bold text-white">
+              Sobre Mí
+            </h2>
+            <div class="w-20 h-1 bg-white rounded"></div>
+          </div>
+
+          <div class="space-y-6 text-gray-300 text-lg leading-relaxed">
+            <p>
+              Soy un desarrollador full stack apasionado por crear soluciones digitales 
+              que marquen la diferencia. Con más de <strong class="text-white">3 años de experiencia</strong> 
+              en el desarrollo web, me especializo en tecnologías modernas como React, Node.js y TypeScript.
+            </p>
+
+            <p>
+              Mi enfoque se centra en escribir código <strong class="text-white">limpio</strong>, 
+              <strong class="text-white">escalable</strong> y <strong class="text-white">mantenible</strong>, 
+              siempre con la experiencia del usuario como prioridad. Me encanta enfrentar desafíos 
+              complejos y encontrar soluciones elegantes que impulsen el crecimiento del negocio.
+            </p>
+
+            <p>
+              Actualmente, estoy disponible para proyectos freelance y oportunidades laborales 
+              donde pueda contribuir con mi experiencia técnica y pasión por la innovación.
+            </p>
+          </div>
+
+          <!-- Stats/Highlights -->
+          <div class="grid grid-cols-2 gap-6 pt-6">
+            <div class="stat-item">
+              <div class="text-3xl font-bold text-white mb-2">25+</div>
+              <div class="text-gray-400">Proyectos Completados</div>
+            </div>
+            <div class="stat-item">
+              <div class="text-3xl font-bold text-white mb-2">3+</div>
+              <div class="text-gray-400">Años de Experiencia</div>
+            </div>
+            <div class="stat-item">
+              <div class="text-3xl font-bold text-white mb-2">15+</div>
+              <div class="text-gray-400">Clientes Satisfechos</div>
+            </div>
+            <div class="stat-item">
+              <div class="text-3xl font-bold text-white mb-2">100%</div>
+              <div class="text-gray-400">Compromiso</div>
+            </div>
+          </div>
+
+          <!-- CTA Button -->
+          <div class="pt-6">
+            <a 
+              href="#contacto" 
+              class="inline-flex items-center gap-2 px-8 py-4 bg-white text-black font-medium rounded-lg hover:bg-gray-200 transition-all duration-300 hover:scale-105"
+            >
+              Hablemos de tu proyecto
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional Info -->
+      <div class="mt-20 grid md:grid-cols-3 gap-8">
+        <div class="info-card group">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center group-hover:bg-gray-700 transition-colors">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white">Innovación</h3>
+          </div>
+          <p class="text-gray-400">
+            Siempre busco las últimas tecnologías y mejores prácticas para crear 
+            soluciones innovadoras y eficientes.
+          </p>
+        </div>
+
+        <div class="info-card group">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center group-hover:bg-gray-700 transition-colors">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white">Puntualidad</h3>
+          </div>
+          <p class="text-gray-400">
+            Respeto los plazos de entrega y mantengo una comunicación constante 
+            durante todo el proceso de desarrollo.
+          </p>
+        </div>
+
+        <div class="info-card group">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center group-hover:bg-gray-700 transition-colors">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white">Calidad</h3>
+          </div>
+          <p class="text-gray-400">
+            Cada proyecto es desarrollado con los más altos estándares de calidad, 
+            siguiendo las mejores prácticas de la industria.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .stat-item {
+    @reference text-center p-4 bg-gray-800 rounded-lg border border-gray-700 hover:border-gray-600 transition-colors;
+  }
+
+  .info-card {
+    @reference bg-gray-950 p-6 rounded-xl border border-gray-800 hover:border-gray-700 transition-all duration-300;
+  }
+
+  .info-card:hover {
+    transform: translateY(-2px);
+  }
+</style>

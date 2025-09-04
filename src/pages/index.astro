@@ -1,11 +1,256 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Hero from "../components/Hero.astro";
+import About from "../components/About.astro";
+import Skills from "../components/Skills.astro";
+import Projects from "../components/Projects.astro";
+import Contact from "../components/Contact.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout>
-	<Welcome />
+  <Navbar />
+  <main>
+    <section id="inicio">
+      <Hero />
+    </section>
+    <About />
+    <Skills />
+    <Projects />
+    <Contact />
+  </main>
+  <Footer />
 </Layout>
+
+<style>
+  /* Global scroll behavior and smooth animations */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Intersection Observer animations */
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+  }
+
+  .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Loading state */
+  .page-loading {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Add page loading animation
+    document.body.classList.add("page-loading");
+
+    // Smooth scrolling for navigation links
+    const navLinks = document.querySelectorAll('a[href^="#"]');
+    navLinks.forEach((link) => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute("href");
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+          const offsetTop = targetElement.offsetTop - 80; // Account for fixed navbar
+          window.scrollTo({
+            top: offsetTop,
+            behavior: "smooth",
+          });
+
+          // Close mobile menu if open
+          const mobileMenu = document.getElementById("mobile-menu");
+          if (mobileMenu && !mobileMenu.classList.contains("hidden")) {
+            mobileMenu.classList.add("hidden");
+          }
+        }
+      });
+    });
+
+    // Intersection Observer for scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px",
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    // Observe elements for animation
+    const animatedElements = document.querySelectorAll(".animate-on-scroll");
+    animatedElements.forEach((el) => {
+      observer.observe(el);
+    });
+
+    // Active navigation highlighting
+    const sections = document.querySelectorAll("section[id]");
+    const navbarLinks = document.querySelectorAll('nav a[href^="#"]');
+
+    const highlightNavigation = () => {
+      const scrollPosition = window.scrollY + 100;
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        const sectionId = section.getAttribute("id");
+
+        if (
+          scrollPosition >= sectionTop &&
+          scrollPosition < sectionTop + sectionHeight
+        ) {
+          navbarLinks.forEach((link) => {
+            link.classList.remove("text-white");
+            link.classList.add("text-gray-300");
+
+            if (link.getAttribute("href") === `#${sectionId}`) {
+              link.classList.remove("text-gray-300");
+              link.classList.add("text-white");
+            }
+          });
+        }
+      });
+    };
+
+    // Throttled scroll handler for performance
+    let isScrolling = false;
+    window.addEventListener("scroll", () => {
+      if (!isScrolling) {
+        window.requestAnimationFrame(() => {
+          highlightNavigation();
+          isScrolling = false;
+        });
+        isScrolling = true;
+      }
+    });
+
+    // Initial call to highlight current section
+    highlightNavigation();
+
+    // Preload critical images (if any)
+    const preloadImages = () => {
+      // Add any critical images here
+      // const images = ['path/to/image1.jpg', 'path/to/image2.jpg'];
+      // images.forEach(src => {
+      //   const img = new Image();
+      //   img.src = src;
+      // });
+    };
+
+    preloadImages();
+
+    // Performance monitoring (optional)
+    if ("performance" in window && "measure" in window.performance) {
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          const perfData = performance.getEntriesByType("navigation")[0];
+          console.log(
+            "Page load time:",
+            perfData.loadEventEnd - perfData.loadEventStart,
+            "ms"
+          );
+        }, 0);
+      });
+    }
+
+    // Add keyboard navigation support
+    document.addEventListener("keydown", (e) => {
+      // Press 'H' to go to hero section
+      if (e.key === "h" || e.key === "H") {
+        document
+          .querySelector("#inicio")
+          ?.scrollIntoView({ behavior: "smooth" });
+      }
+      // Press 'C' to go to contact section
+      if (e.key === "c" || e.key === "C") {
+        document
+          .querySelector("#contacto")
+          ?.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+
+    // Enhanced accessibility
+    const focusableElements = document.querySelectorAll(
+      'a, button, input, textarea, select, [tabindex]:not([tabindex="-1"])'
+    );
+
+    // Skip to content functionality
+    const createSkipLink = () => {
+      const skipLink = document.createElement("a");
+      skipLink.href = "#inicio";
+      skipLink.textContent = "Saltar al contenido principal";
+      skipLink.className =
+        "sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-white text-black px-4 py-2 rounded-lg z-50";
+      skipLink.style.cssText = `
+        position: absolute;
+        top: -40px;
+        left: 6px;
+        background: white;
+        color: black;
+        padding: 8px 16px;
+        text-decoration: none;
+        border-radius: 6px;
+        z-index: 1000;
+        transition: top 0.3s;
+      `;
+
+      skipLink.addEventListener("focus", () => {
+        skipLink.style.top = "24px";
+      });
+
+      skipLink.addEventListener("blur", () => {
+        skipLink.style.top = "-40px";
+      });
+
+      document.body.insertBefore(skipLink, document.body.firstChild);
+    };
+
+    createSkipLink();
+  });
+
+  // Service Worker registration for PWA capabilities (optional)
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      // Uncomment if you add a service worker
+      // navigator.serviceWorker.register('/sw.js')
+      //   .then(registration => console.log('SW registered'))
+      //   .catch(error => console.log('SW registration failed'));
+    });
+  }
+</script>
