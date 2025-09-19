@@ -2,23 +2,38 @@
 // Hero.astro
 ---
 
-<section class="min-h-screen flex items-center justify-center relative overflow-hidden">
+<section
+  class="min-h-screen flex items-center justify-center relative overflow-hidden"
+>
   <!-- Background gradient -->
-  <div class="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black opacity-90"></div>
-  
+  <div
+    class="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black opacity-90"
+  >
+  </div>
+
   <!-- Animated background elements -->
   <div class="absolute inset-0">
-    <div class="absolute top-20 left-20 w-72 h-72 bg-white opacity-5 rounded-full blur-3xl animate-pulse"></div>
-    <div class="absolute bottom-20 right-20 w-96 h-96 bg-white opacity-3 rounded-full blur-3xl animate-pulse delay-700"></div>
+    <div
+      class="absolute top-20 left-20 w-72 h-72 bg-white opacity-5 rounded-full blur-3xl animate-pulse"
+    >
+    </div>
+    <div
+      class="absolute bottom-20 right-20 w-96 h-96 bg-white opacity-3 rounded-full blur-3xl animate-pulse delay-700"
+    >
+    </div>
   </div>
 
   <div class="container mx-auto px-6 relative z-10">
     <div class="max-w-4xl mx-auto text-center">
       <!-- Profile Image -->
       <div class="mb-8">
-        <div class="w-32 h-32 mx-auto rounded-full bg-gradient-to-r from-white to-gray-300 p-1">
-          <div class="w-full h-full rounded-full bg-gray-800 flex items-center justify-center">
-            <span class="text-4xl font-bold text-white">TU</span>
+        <div
+          class="w-32 h-32 mx-auto rounded-full bg-gradient-to-r from-white to-gray-300 p-1"
+        >
+          <div
+            class="w-full h-full rounded-full bg-gray-800 flex items-center justify-center"
+          >
+            <span class="text-4xl font-bold text-white">JL</span>
           </div>
         </div>
       </div>
@@ -26,27 +41,40 @@
       <!-- Main Content -->
       <div class="space-y-6 animate-fade-in">
         <h1 class="text-5xl md:text-7xl font-bold leading-tight">
-          <span class="block text-white">Hola, soy</span>
-          <span class="block bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
-            Tu Nombre
+          <span class="block text-white">Hey, soy</span>
+          <span
+            class="block bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent"
+          >
+            Jesús Luvian
           </span>
         </h1>
-        
-        <p class="text-xl md:text-2xl text-gray-300 font-light max-w-2xl mx-auto">
-          Desarrollador Full Stack especializado en crear experiencias digitales 
-          <span class="text-white font-medium">modernas</span> y 
-          <span class="text-white font-medium">escalables</span>
+
+        <p
+          class="text-xl md:text-2xl text-white max-w-2xl mx-auto leading-relaxed tracking-wide"
+        >
+          Desarrollador Full Stack
+        </p>
+
+        <p
+          class="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed tracking-wide"
+        >
+          Apasionado por el desarrollo de soluciones digitales que aporten
+          valor, ya sea creando nuevas aplicaciones, optimizando procesos o
+          brindando soporte a proyectos en curso. Con experiencia en diversas
+          tecnologías modernas y siempre abierto a aprender, colaborar y
+          enfrentar nuevos desafíos para impulsar el crecimiento y éxito de cada
+          equipo y organización.
         </p>
 
         <div class="flex flex-col sm:flex-row gap-4 justify-center pt-8">
-          <a 
-            href="#proyectos" 
+          <a
+            href="#skills"
             class="px-8 py-4 bg-white text-black font-medium rounded-lg hover:bg-gray-200 transition-all duration-300 hover:scale-105"
           >
-            Ver Proyectos
+            Ver Skills
           </a>
-          <a 
-            href="#contacto" 
+          <a
+            href="#contacto"
             class="px-8 py-4 border border-white text-white font-medium rounded-lg hover:bg-white hover:text-black transition-all duration-300"
           >
             Contáctame
@@ -54,13 +82,6 @@
         </div>
       </div>
     </div>
-  </div>
-
-  <!-- Scroll indicator -->
-  <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-    </svg>
   </div>
 </section>
 

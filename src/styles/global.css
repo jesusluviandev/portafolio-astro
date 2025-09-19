@@ -1,1 +1,126 @@
 @import "tailwindcss";
+
+.skill-card {
+  @apply bg-gray-900 p-6 rounded-xl border border-gray-800 hover:border-gray-600 transition-all duration-300 hover:scale-105 hover:bg-gray-800;
+}
+
+.skill-icon {
+  @apply text-gray-400 group-hover:text-white transition-colors duration-300 mb-4 flex justify-center;
+}
+
+.skill-title {
+  @apply text-gray-300 font-medium text-center group-hover:text-white transition-colors duration-300;
+}
+
+.skill-card:hover .skill-icon {
+  transform: translateY(-2px);
+}
+
+.framework-tag {
+  @apply px-4 py-2 bg-gray-800 text-gray-300 rounded-full text-sm font-medium border border-gray-700 hover:border-gray-500 hover:bg-gray-700 transition-colors;
+}
+
+.soft-skill-tag {
+  @apply px-4 py-2 bg-gray-800 text-gray-300 rounded-full text-sm font-medium hover:bg-gray-700 hover:text-white transition-colors;
+}
+
+.stat-item {
+  @apply text-center p-4 bg-gray-800 rounded-lg border border-gray-700 hover:border-gray-600 transition-colors;
+}
+
+.info-card {
+  @apply bg-gray-950 p-6 rounded-xl border border-gray-800 hover:border-gray-700 transition-all duration-300;
+}
+
+.info-card:hover {
+  transform: translateY(-2px);
+}
+
+.form-group {
+  @apply space-y-2;
+}
+
+.form-label {
+  @apply block text-sm font-medium text-gray-300;
+}
+
+.form-input {
+  @apply w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition-all duration-200;
+}
+
+.form-input:focus {
+  @apply bg-gray-800;
+}
+
+.contact-item {
+  @apply flex items-start gap-4 p-4 bg-gray-900 rounded-lg border border-gray-800 hover:border-gray-700 transition-colors;
+}
+
+.contact-icon {
+  @apply w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400 group-hover:text-white group-hover:bg-gray-700 transition-all;
+}
+
+.social-link {
+  @apply w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-gray-800 transition-all duration-300 border border-gray-800 hover:border-gray-600;
+}
+
+.social-link:hover {
+  transform: translateY(-2px);
+}
+
+.footer-link {
+  @apply block text-gray-400 hover:text-white transition-colors text-sm;
+}
+
+.footer-link-static {
+  @apply text-gray-400 text-sm;
+}
+
+.footer-social-link {
+  @apply text-gray-400 hover:text-white transition-colors p-2 rounded-lg hover:bg-gray-800;
+}
+
+#back-to-top.show {
+  @apply opacity-100 pointer-events-auto;
+}
+
+.nav-link {
+  @apply text-gray-300 hover:text-white transition-all duration-300 relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 50%;
+  background: white;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.mobile-nav-link {
+  @apply text-gray-300 hover:text-white transition-colors duration-300 py-2;
+}
+
+.project-card {
+  @apply bg-gray-950 border border-gray-800 rounded-2xl p-8 hover:border-gray-700 transition-all duration-300;
+}
+
+.project-image-container {
+  @apply relative overflow-hidden rounded-lg shadow-2xl;
+}
+
+.tech-tag {
+  @apply text-xs font-medium px-3 py-1 bg-gray-800 text-gray-300 rounded-full border border-gray-700;
+}
+
+.project-card:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}

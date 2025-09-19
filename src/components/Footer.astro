@@ -1,33 +1,30 @@
 ---
 // Footer.astro
+const currentYear = new Date().getFullYear();
 ---
 
 <footer class="bg-gray-950 border-t border-gray-800 py-12">
   <div class="container mx-auto px-6">
     <div class="max-w-6xl mx-auto">
-      <div class="grid md:grid-cols-4 gap-8">
-        <!-- Brand/Logo -->
+      <div class="grid md:grid-cols-3 gap-8">
         <div class="md:col-span-2 space-y-4">
           <div class="flex items-center gap-3">
             <span
               class="bg-white text-black px-3 py-2 rounded-lg font-bold text-xl"
-              >TU</span
+              >JL</span
             >
-            <span class="text-white font-bold text-xl">Tu Nombre</span>
+            <span class="text-white font-bold text-xl">Jesús Luvian</span>
           </div>
-          <p class="text-gray-400 max-w-md">
-            Desarrollador Full Stack especializado en crear experiencias
-            digitales modernas y escalables que impulsan el crecimiento del
-            negocio.
+          <p class="text-gray-400 max-w-md leading-relaxed">
+            ¡Step by Step, Coding a New World!
           </p>
 
-          <!-- Social Links -->
           <div class="flex gap-4 pt-2">
             <a
-              href="https://github.com/tu-usuario"
+              href="https://github.com/jesusluviandev"
               target="_blank"
               rel="noopener noreferrer"
-              class="footer-social-link"
+              class="text-gray-400 hover:text-white transition-colors p-2"
               aria-label="GitHub"
             >
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -38,10 +35,10 @@
             </a>
 
             <a
-              href="https://linkedin.com/in/tu-perfil"
+              href="https://linkedin.com/in/jesus-luvian"
               target="_blank"
               rel="noopener noreferrer"
-              class="footer-social-link"
+              class="text-gray-400 hover:text-white transition-colors p-2"
               aria-label="LinkedIn"
             >
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -52,63 +49,12 @@
             </a>
 
             <a
-              href="https://twitter.com/tu-usuario"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="footer-social-link"
-              aria-label="Twitter"
-            >
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path
-                  d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
-                ></path>
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- Quick Links -->
-        <div class="space-y-4">
-          <h3 class="text-white font-semibold text-lg">Navegación</h3>
-          <nav class="space-y-2">
-            <a href="#inicio" class="footer-link">Inicio</a>
-            <a href="#sobre-mi" class="footer-link">Sobre Mí</a>
-            <a href="#skills" class="footer-link">Skills</a>
-            <a href="#proyectos" class="footer-link">Proyectos</a>
-            <a href="#contacto" class="footer-link">Contacto</a>
-          </nav>
-        </div>
-
-        <!-- Services/Skills -->
-        <div class="space-y-4">
-          <h3 class="text-white font-semibold text-lg">Servicios</h3>
-          <div class="space-y-2">
-            <p class="footer-link-static">Desarrollo Web</p>
-            <p class="footer-link-static">Aplicaciones React</p>
-            <p class="footer-link-static">APIs REST</p>
-            <p class="footer-link-static">E-commerce</p>
-            <p class="footer-link-static">Optimización SEO</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Bottom Section -->
-      <div class="border-t border-gray-800 mt-12 pt-8">
-        <div
-          class="flex flex-col md:flex-row justify-between items-center gap-4"
-        >
-          <div class="text-gray-400 text-sm">
-            © 2024 Tu Nombre. Todos los derechos reservados.
-          </div>
-
-          <!-- Quick Contact -->
-          <div class="flex items-center gap-6 text-sm">
-            <a
-              href="mailto:tu@email.com"
-              class="text-gray-400 hover:text-white transition-colors flex items-center gap-2"
+              href="mailto:jesus.luvian.luis@gmail.com"
+              class="text-gray-400 hover:text-white transition-colors p-2"
+              aria-label="Email"
             >
               <svg
-                class="w-4 h-4"
+                class="w-5 h-5"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -120,96 +66,46 @@
                   d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                 ></path>
               </svg>
-              tu@email.com
             </a>
+          </div>
+        </div>
 
-            <div class="flex items-center gap-2 text-gray-400">
-              <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse">
-              </div>
-              Disponible para proyectos
-            </div>
+        <div class="space-y-4">
+          <h3 class="text-white font-semibold text-lg">Índice</h3>
+          <div class="flex flex-col space-y-3">
+            <a
+              href="#inicio"
+              class="text-gray-400 hover:text-white transition-colors text-sm"
+            >
+              Inicio
+            </a>
+            <a
+              href="#sobre-mi"
+              class="text-gray-400 hover:text-white transition-colors text-sm"
+            >
+              Sobre Mí
+            </a>
+            <a
+              href="#skills"
+              class="text-gray-400 hover:text-white transition-colors text-sm"
+            >
+              Skills
+            </a>
+            <a
+              href="#contacto"
+              class="text-gray-400 hover:text-white transition-colors text-sm"
+            >
+              Contacto
+            </a>
           </div>
         </div>
       </div>
 
-      <!-- Back to Top Button -->
-      <div class="fixed bottom-6 right-6 z-50">
-        <button
-          id="back-to-top"
-          class="bg-white text-black p-3 rounded-full shadow-lg hover:bg-gray-200 transition-all duration-300 transform hover:scale-110 opacity-0 pointer-events-none"
-          aria-label="Volver al inicio"
-        >
-          <svg
-            class="w-5 h-5"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
-          </svg>
-        </button>
+      <div class="border-t border-gray-800 mt-8 pt-6 text-center">
+        <div class="text-gray-400 text-sm">
+          © {currentYear} Jesús Eduardo Luvian Luis. Todos los derechos reservados.
+        </div>
       </div>
     </div>
   </div>
 </footer>
-
-<style>
-  .footer-link {
-    @reference block text-gray-400 hover:text-white transition-colors text-sm;
-  }
-
-  .footer-link-static {
-    @reference text-gray-400 text-sm;
-  }
-
-  .footer-social-link {
-    @reference text-gray-400 hover:text-white transition-colors p-2 rounded-lg hover:bg-gray-800;
-  }
-
-  #back-to-top.show {
-    @reference opacity-100 pointer-events-auto;
-  }
-</style>
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const backToTopButton = document.getElementById("back-to-top");
-
-    // Show/hide back to top button based on scroll position
-    window.addEventListener("scroll", () => {
-      if (window.pageYOffset > 300) {
-        backToTopButton?.classList.add("show");
-      } else {
-        backToTopButton?.classList.remove("show");
-      }
-    });
-
-    // Smooth scroll to top
-    backToTopButton?.addEventListener("click", () => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    });
-
-    // Smooth scrolling for footer links
-    const footerLinks = document.querySelectorAll('a[href^="#"]');
-    footerLinks.forEach((link) => {
-      link.addEventListener("click", (e) => {
-        e.preventDefault();
-        const targetId = link.getAttribute("href");
-        const targetElement = document.querySelector(targetId);
-
-        if (targetElement) {
-          targetElement.scrollIntoView({
-            behavior: "smooth",
-          });
-        }
-      });
-    });
-  });
-</script>
