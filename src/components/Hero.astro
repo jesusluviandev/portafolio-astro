@@ -1,7 +1,3 @@
----
-// Hero.astro
----
-
 <section
   class="min-h-screen flex items-center justify-center relative overflow-hidden pt-25 md:pt-25 pb-15"
 >
@@ -86,17 +82,13 @@
     animation: fade-in 1s ease-out;
   }
 
-  /* --- NUEVO CSS PARA EL CURSOR --- */
-  /* El cursor se añade como un pseudo-elemento ::after */
   #typing-effect::after {
     content: "|";
-    /* El gradiente no se puede heredar, así que le ponemos un color fijo */
-    color: #a0aec0; /* Un gris de Tailwind (gray-400) */
+    color: #a0aec0;
     animation: blink 1s step-end infinite;
-    margin-left: 0.25rem; /* Un pequeño espacio */
+    margin-left: 0.25rem;
   }
 
-  /* Animación para el parpadeo del cursor */
   @keyframes blink {
     from,
     to {
@@ -110,60 +102,46 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    // Seleccionamos el elemento que tendrá el efecto
     const typingElement = document.getElementById("typing-effect");
     if (!typingElement) return;
 
-    // Texto que se va a animar
     const textToAnimate = "Jesús Luvian";
 
-    // Parámetros de la animación
     const typingSpeed = 150; // Velocidad de escritura (ms)
     const deletingSpeed = 100; // Velocidad de borrado (ms)
     const delayAfterTyping = 2500; // Pausa después de escribir todo (ms)
     const delayAfterDeleting = 500; // Pausa después de borrar todo (ms)
 
-    let charIndex = textToAnimate.length; // Empezamos con el texto completo
-    let isDeleting = true; // La primera acción será borrar
+    let charIndex = textToAnimate.length;
+    let isDeleting = true;
 
     function typeEffect() {
-      // Obtenemos el texto actual basado en el índice
       const currentText = textToAnimate.substring(0, charIndex);
 
       if (typingElement) typingElement.textContent = currentText;
 
-      // Lógica para decidir si borrar o escribir
       if (isDeleting) {
-        // Si estamos borrando, decrementamos el índice
         charIndex--;
       } else {
-        // Si estamos escribiendo, incrementamos el índice
         charIndex++;
       }
 
-      // Lógica para cambiar de estado (de borrar a escribir y viceversa)
       if (charIndex < 0) {
-        // Si ya se borró todo
         isDeleting = false;
         charIndex = 0;
-        // Esperamos un poco antes de empezar a escribir
         setTimeout(typeEffect, delayAfterDeleting);
         return;
       } else if (charIndex > textToAnimate.length) {
-        // Si ya se escribió todo
         isDeleting = true;
         charIndex = textToAnimate.length;
-        // Esperamos un buen rato con el texto completo antes de volver a borrar
         setTimeout(typeEffect, delayAfterTyping);
         return;
       }
 
-      // Llamada recursiva con el tiempo correspondiente
       const speed = isDeleting ? deletingSpeed : typingSpeed;
       setTimeout(typeEffect, speed);
     }
 
-    // Iniciar la animación después de una pausa inicial para que el texto sea visible
     setTimeout(typeEffect, delayAfterTyping);
   });
 </script>

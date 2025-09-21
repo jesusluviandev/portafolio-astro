@@ -1,6 +1,4 @@
 ---
-// src/components/Skills.astro
-
 const skills = [
   {
     name: "HTML5",
@@ -128,15 +126,11 @@ const skills = [
     @reference transform -translate-y-2 border-cyan-500 shadow-lg shadow-cyan-500/10;
   }
 
-  /* ESTILO GRISÁCEO POR DEFECTO */
   .skill-icon {
-    /* Aquí se define el color gris para los íconos */
     @reference text-gray-400 mb-4 transition-colors duration-300;
   }
 
-  /* EFECTO HOVER */
   .skill-card:hover .skill-icon {
-    /* Al pasar el mouse, el color del ícono cambia a cyan */
     @reference text-cyan-400;
   }
 

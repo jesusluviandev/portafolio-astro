@@ -1,30 +1,20 @@
----
-// About.astro
-
-import { Image } from "astro:assets";
-import fotoProfesional from "../assets/foto_profesional.jpg";
----
-
 <section id="sobre-mi" class="py-20 bg-gray-900">
   <div class="container mx-auto px-6">
     <div class="max-w-6xl mx-auto">
       <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <!-- Image/Visual Side -->
+        <!-- Visual/Decorative Side -->
         <div class="order-2 lg:order-1">
           <div class="relative">
-            <!-- Profile Image -->
+            <!-- Abstract Shape -->
             <div class="w-full max-w-md mx-auto">
               <div
-                class="aspect-square bg-gradient-to-br from-gray-800 to-gray-700 rounded-2xl overflow-hidden"
+                class="aspect-square bg-gradient-to-br from-gray-800 to-gray-700 rounded-2xl flex items-center justify-center"
               >
-                <Image
-                  src={fotoProfesional}
-                  alt="Jesús Eduardo Luvian Luis - Desarrollador Full Stack"
-                  class="w-full h-full object-cover object-top"
-                  width={600}
-                  height={600}
-                  format="webp"
-                />
+                <span
+                  class="text-6xl md:text-8xl font-bold text-white opacity-20"
+                >
+                  JL
+                </span>
               </div>
             </div>
 
@@ -40,6 +30,7 @@ import fotoProfesional from "../assets/foto_profesional.jpg";
           </div>
         </div>
 
+        <!-- Text Content -->
         <div class="order-1 lg:order-2 space-y-6">
           <div class="space-y-4">
             <h2 class="text-4xl md:text-5xl font-bold text-white">Sobre Mí</h2>
@@ -49,10 +40,12 @@ import fotoProfesional from "../assets/foto_profesional.jpg";
           <div class="space-y-6 text-gray-300 text-lg leading-relaxed">
             <p>
               Soy un <strong class="text-white">Desarrollador Full Stack</strong
-              > con más de
-              <strong class="text-white">2 años de experiencia</strong> en el diseño
-              y construcción de aplicaciones únicas. Me gusta transformar ideas en soluciones
-              funcionales y adaptables, siempre con un enfoque en la
+              >
+              con más de <strong class="text-white"
+                >2 años de experiencia</strong
+              > en el diseño y construcción de aplicaciones únicas. Me gusta transformar
+              ideas en soluciones funcionales y adaptables, siempre con un enfoque
+              en la
               <strong class="text-white">calidad</strong>.
             </p>
 
@@ -60,10 +53,8 @@ import fotoProfesional from "../assets/foto_profesional.jpg";
               Además del desarrollo, participo en la definición de
               <strong class="text-white">requerimientos</strong>, la
               <strong class="text-white">gestión de proyectos</strong> y la aplicación
-              de
-              <strong class="text-white">patrones de diseño</strong> que favorecen
-              la
-              <strong class="text-white">evolución</strong> y el
+              de <strong class="text-white">patrones de diseño</strong> que favorecen
+              la <strong class="text-white">evolución</strong> y el
               <strong class="text-white">mantenimiento</strong> a largo plazo. Esto
               me permite aportar tanto en la parte técnica como en la organización
               de los proyectos.

@@ -27,13 +27,11 @@ import Footer from "../components/Footer.astro";
 </Layout>
 
 <style>
-  /* Global scroll behavior and smooth animations */
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 4rem;
   }
 
-  /* Custom animations */
   @keyframes fadeInUp {
     from {
       opacity: 0;
@@ -54,7 +52,6 @@ import Footer from "../components/Footer.astro";
     }
   }
 
-  /* Intersection Observer animations */
   .animate-on-scroll {
     opacity: 0;
     transform: translateY(30px);
@@ -66,7 +63,6 @@ import Footer from "../components/Footer.astro";
     transform: translateY(0);
   }
 
-  /* Loading state */
   .page-loading {
     opacity: 0;
     animation: fadeIn 0.5s ease-out forwards;

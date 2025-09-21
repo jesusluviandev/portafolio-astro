@@ -1,48 +1,59 @@
-# Astro Starter Kit: Basics
+# 🌌 Portafolio con Astro + Tailwind v4.1
 
-```sh
-npm create astro@latest -- --template basics
-```
+Un portafolio moderno y minimalista construido con
+[Astro](https://astro.build/) y [TailwindCSS](https://tailwindcss.com/).\
+Este proyecto es open source y puede ser adaptado y desplegado
+fácilmente.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## ✨ Características
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+-   Astro: Generador de sitios rápido.
+-   TailwindCSS: Utilidades modernas de estilo.
+-   Diseño responsive y adaptable.
+-   Secciones comunes: Inicio, Sobre mí, Proyectos, Contacto.
+-   Visuales abstractos en lugar de foto personal.
+-   Listo para producción.
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## 📂 Estructura
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
+``` text
 /
 ├── public/
-│   └── favicon.svg
+│   └── code-tag.svg
 ├── src/
+│   ├── assets/
+│   ├── components/
 │   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
+│   ├── pages/
+│   └── styles/
 └── package.json
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## 🧞 Comandos
 
-## 🧞 Commands
+  Comando             Acción
+  ------------------- -------------------------------------------
+  `npm install`       Instala dependencias
+  `npm run dev`       Servidor local en `http://localhost:4321`
+  `npm run build`     Genera la versión de producción
+  `npm run preview`   Previsualiza la build
 
-All commands are run from the root of the project, from a terminal:
+## 🚀 Deployment
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Compatible con Netlify, Vercel, GitHub Pages o cualquier hosting
+estático.
 
-## 👀 Want to learn more?
+## 🔧 Personalización
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+-   Edita contenido en `src/pages` y `src/components`.
+-   Ajusta estilos en `tailwind.config.mjs`.
+-   Sustituye imágenes en `src/assets`.
+
+## 🤝 Contribuciones
+
+Las contribuciones son bienvenidas. Haz un fork, crea tu rama y abre un
+pull request.
+
+## 👨‍🚀 Autor
+
+Creado por **Jesús Eduardo Luvian Luis**.

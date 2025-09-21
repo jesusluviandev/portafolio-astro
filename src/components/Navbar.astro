@@ -1,7 +1,3 @@
----
-// Navbar.astro
----
-
 <nav class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-gray-800">
   <div class="container mx-auto px-6">
     <div class="flex items-center justify-between h-16">
@@ -266,13 +262,11 @@
       isMenuOpen = !isMenuOpen;
       
       if (isMenuOpen) {
-        // Abrir menú
         mobileMenuButton?.classList.add("menu-open");
         mobileMenu?.classList.add("menu-open");
         mobileMenuButton?.setAttribute("aria-label", "Cerrar menú");
-        document.body.style.overflow = "hidden"; // Prevenir scroll
+        document.body.style.overflow = "hidden";
       } else {
-        // Cerrar menú
         mobileMenuButton?.classList.remove("menu-open");
         mobileMenu?.classList.remove("menu-open");
         mobileMenuButton?.setAttribute("aria-label", "Abrir menú");
@@ -282,7 +276,6 @@
 
     mobileMenuButton?.addEventListener("click", toggleMenu);
 
-    // Cerrar menú cuando se hace click en un enlace
     const mobileLinks = mobileMenu?.querySelectorAll("a");
     mobileLinks?.forEach((link) => {
       link.addEventListener("click", () => {
@@ -292,14 +285,12 @@
       });
     });
 
-    // Cerrar menú con tecla Escape
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape" && isMenuOpen) {
         toggleMenu();
       }
     });
 
-    // Cerrar menú al hacer click fuera de él
     document.addEventListener("click", (e) => {
       const target = e.target as HTMLElement;
       if (isMenuOpen && 
