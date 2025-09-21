@@ -1,4 +1,4 @@
-# 🌌 Portafolio con Astro + Tailwind v4.1
+# 🌌 Portafolio con Astro + Tailwind
 
 Un portafolio moderno y minimalista construido con
 [Astro](https://astro.build/) y [TailwindCSS](https://tailwindcss.com/).\
@@ -31,12 +31,12 @@ fácilmente.
 
 ## 🧞 Comandos
 
-  Comando             Acción
-  ------------------- -------------------------------------------
-  `npm install`       Instala dependencias
-  `npm run dev`       Servidor local en `http://localhost:4321`
-  `npm run build`     Genera la versión de producción
-  `npm run preview`   Previsualiza la build
+| Comando          | Acción                                       |
+| ---------------- | -------------------------------------------- |
+| `npm install`    | Instala dependencias                         |
+| `npm run dev`    | Servidor local en `http://localhost:4321`    |
+| `npm run build`  | Genera la versión de producción              |
+| `npm run preview`| Previsualiza la build                        |
 
 ## 🚀 Deployment
 
